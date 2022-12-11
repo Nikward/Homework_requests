@@ -11,7 +11,8 @@ def parser_hero(name_hero: list):
         if i['name'] in name_hero:
             superhero_intellect[i['name']] = int(i['powerstats']['intelligence'])
     win_hero = [key for (key, value) in superhero_intellect.items() if value == max(superhero_intellect.values())][0]
-    print(f"Самый интелектуальный {win_hero}, интелект: {superhero_intellect[win_hero]}")
+
+    print(f"Самый интелектуальный супергерой {win_hero}, его интелект составляет: {superhero_intellect[win_hero]}")
 
 if __name__ == '__main__':
     parser_hero(['Hulk', 'Captain America', 'Thanos'])
